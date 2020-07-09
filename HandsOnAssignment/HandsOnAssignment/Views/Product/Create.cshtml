@@ -1,0 +1,36 @@
+﻿@model HandsOnAssignment.Models.Product
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        <table class="container">
+            <tr>
+                <td>Product Id</td>
+                <td>@Html.TextBoxFor(m=>m.Pid)</td>
+                <td>@Html.ValidationMessageFor(m=>m.Pid)</td>
+            </tr>
+            <tr>
+                <td>Product Name</td>
+                <td>@Html.TextBoxFor(m=>m.Pname)</td>
+                <td>@Html.ValidationMessageFor(m=>m.Pname)</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>@Html.TextBoxFor(m => m.Price)</td>
+                <td>@Html.ValidationMessageFor(m=>m.Price)</td>
+            </tr>
+            <tr>
+                <td>Stock</td>
+                <td>@Html.TextBoxFor(m => m.Stock)</td>
+                <td>@Html.ValidationMessageFor(m=>m.Stock)</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="SAVE"/></td>
+            </tr>
+        </table>
+    }
+</div>
